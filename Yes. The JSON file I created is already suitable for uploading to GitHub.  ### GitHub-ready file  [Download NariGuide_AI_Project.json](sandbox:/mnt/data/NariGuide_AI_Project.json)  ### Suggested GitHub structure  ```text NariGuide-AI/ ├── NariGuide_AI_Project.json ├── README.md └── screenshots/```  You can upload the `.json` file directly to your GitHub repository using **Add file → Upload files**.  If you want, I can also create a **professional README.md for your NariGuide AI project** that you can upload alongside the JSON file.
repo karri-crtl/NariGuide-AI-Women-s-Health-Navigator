@@ -1,0 +1,79 @@
+{
+  "project_name": "NariGuide AI",
+  "project_type": "GenAI Health Guidance Assistant",
+  "theme": "Women's Health",
+  "problem_statement": "Women may have difficulty finding simple, understandable health information and knowing what safe next step to take. NariGuide AI provides health education, asks for minimal necessary information, performs safety checks, and guides users toward appropriate next steps or professional consultation.",
+  "target_users": "Women seeking general health education and guidance.",
+  "solution": {
+    "overview": "NariGuide AI is a conversational assistant that provides clear health education without making a diagnosis.",
+    "core_features": [
+      "Health education",
+      "Minimal information collection",
+      "Safety checks",
+      "Next-step guidance",
+      "Consultation preparation"
+    ],
+    "user_journey": [
+      "User describes a health concern",
+      "NariGuide asks only necessary follow-up questions",
+      "AI provides simple educational information",
+      "AI checks for situations that may need professional attention",
+      "AI suggests an appropriate next step"
+    ]
+  },
+  "genai_workflow": {
+    "user_input": "Health concern and only necessary details provided by the user.",
+    "prompt": "Act as NariGuide AI. Provide simple, clear health education. Ask only necessary follow-up questions. Do not diagnose or prescribe. Identify safety concerns and recommend professional medical care when appropriate. Give practical next-step guidance.",
+    "model_service": "Amazon PartyRock / Amazon Bedrock foundation model",
+    "processing_rules": [
+      "Use simple and respectful language",
+      "Collect minimal information",
+      "Do not claim to diagnose a condition",
+      "Include safety guidance when concerning symptoms are described",
+      "Recommend a qualified healthcare professional when appropriate",
+      "Do not request passwords, financial information, or unnecessary personal data"
+    ],
+    "output": "A clear educational response, safety guidance when needed, and suggested next steps."
+  },
+  "important_prompts": [
+    "Explain this women's health concern in simple language and provide safe next-step guidance.",
+    "Ask only the minimum necessary questions needed to understand the user's concern.",
+    "If the situation may require professional care, clearly recommend consulting a qualified healthcare professional."
+  ],
+  "testing": [
+    {
+      "test": 1,
+      "scenario": "User enters a common women's health concern.",
+      "expected_result": "Provide simple health education and safe next-step guidance.",
+      "actual_result": "NariGuide provides health information and next-step guidance.",
+      "status": "Pass",
+      "improvement": "Prompt refined for clearer and shorter answers."
+    },
+    {
+      "test": 2,
+      "scenario": "User provides incomplete information.",
+      "expected_result": "Ask only necessary follow-up questions.",
+      "actual_result": "NariGuide asks relevant follow-up questions.",
+      "status": "Pass",
+      "improvement": "Prompt refined to minimize information collection."
+    },
+    {
+      "test": 3,
+      "scenario": "User describes a serious or unexpected health concern.",
+      "expected_result": "Provide safety-focused guidance and recommend professional medical help when appropriate.",
+      "actual_result": "NariGuide provides a safety-focused response and recommends professional care when appropriate.",
+      "status": "Pass",
+      "improvement": "Safety instructions strengthened."
+    }
+  ],
+  "safety_note": "NariGuide AI is for general health education and guidance. It should not replace diagnosis or treatment by a qualified healthcare professional.",
+  "submission_checklist": [
+    "PartyRock access confirmed",
+    "Email access confirmed",
+    "Cloud storage access confirmed",
+    "Submission portal access confirmed",
+    "Working prototype prepared",
+    "Testing completed with three scenarios",
+    "Actual uncropped 10:00 AM and 12:00 PM screenshots included with device time visible"
+  ]
+}
